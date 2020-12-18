@@ -1,0 +1,19 @@
+
+.main{
+  border-bottom: 1px solid #B0A990; 
+  color:blue;
+}
+.amount_sect_logo{
+  
+    color:blue;
+    font-size: 2rem;
+}
+.cards{
+    margin:10%;
+    padding-left: 10%;
+}
+.amount_sect{
+    background-color:#dde2e6;
+    font-size: 2rem;
+    margin:4px;
+}
