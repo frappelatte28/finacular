@@ -1,5 +1,3 @@
-
-
 function Planning() {
   return (
     <div className='planning'>

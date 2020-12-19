@@ -1,23 +1,18 @@
-
-.main{
-  border-bottom: 1px solid #B0A990; 
-  color:blue;
+.main {
+  border-bottom: 1px solid #b0a990;
+  color: blue;
 }
-.amount_sect_logo{
-  
-    color:blue;
-    font-size: 2rem;
+.amount_sect_logo {
+  color: blue;
+  font-size: 2rem;
 }
-.cards{
-    margin:10%;
-    padding-left: 10%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.cards {
+  margin: 10%;
+  padding-left: 10%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-.amount_sect{
-    background-color:#dde2e6;
-    font-size: 2rem;
-    margin:4px;
+.amount_sect {
+  background-color: #dde2e6;
+  font-size: 2rem;
+  margin: 4px;
 }
-/* .card{
-    width: 300px;
-} */

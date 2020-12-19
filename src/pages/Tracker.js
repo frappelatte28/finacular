@@ -1,8 +1,6 @@
-import React from 'react';
-
 function Tracker() {
   return (
-    <div className='tracker'>
+    <div className="tracker">
       <h1>Tracker</h1>
     </div>
   );
