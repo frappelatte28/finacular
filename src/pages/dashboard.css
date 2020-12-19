@@ -1,7 +1,14 @@
 .recharts-wrapper {
     margin : 0 auto;
-    top:40px;
-  }
-.tooltip{
-    border:2px 
+    top:25px;
+}
+  
+  .recharts-wrapper::before{
+  content:"Anual Balance ( In lakhs )";
+  position:absolute;
+  top:42%;
+  left:-100px;
+  transform:rotate(-90deg);
+  font-size: 1.1rem;
+
 }

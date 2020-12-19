@@ -8,8 +8,9 @@ import SimpleCard from './card';
 import { yellow } from '@material-ui/core/colors';
 import Overlay from 'react-bootstrap/Overlay';
 import TooltipBtsp from 'react-bootstrap/Tooltip';
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
-console.log(TooltipBtsp)
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Actions from '../Components/actions';
+import {Row,Col} from 'react-bootstrap';
 
 const data = [
   {name: '1', pv: 10, amt: 2400},
@@ -49,28 +50,48 @@ const renderCustomizedLabel = (props) => {
     </g>
   );
 };
+const AxisLabel = ({ axisType, x, y, width, height, stroke, children }) => {
+  const isVert = axisType === 'yAxis';
+  const cx = isVert ? x : x + (width / 2);
+  const cy = isVert ? (height / 2) + y : y + height + 10;
+  const rot = isVert ? `270 ${cx} ${cy}` : 0;
+  return (
+    <foreignObject>
+      <div>
+        hello
+      </div>
+    </foreignObject>
+  );
+};
 
-export default class Example extends PureComponent {
- 
-  render() {
+export default function Dashboard(props){
+
+   console.log("dashboard" ,props.isOpen) 
     return (
       <div>
-        
-          <div className = "recharts-wrapper">
+    
+        <Row noGutters = {true}>
+        {props.isOpen ?  <Col xs={2}></Col> : " "}
+       
+       <Col className = "p-3">
+       <div className = " border pb-5">
+       <Row className="justify-content-center fs-large p-1">
+        Annual Projection
+      </Row>
         <BarChart
        barCategoryGap = "25%"
-       width={700}
+       width={600}
        height={400}
        data={data}
-       margin={{
-         top: 5, right: 30, left: 20, bottom: 5,
-       }}
+      
+
      >
       
-       <XAxis dataKey="name" axisLine={false} />
-       <YAxis axisLine={false} />
+       <XAxis label ="year" padding = {{top:200}} height = {60} dataKey="name" axisLine={false} />
+       <YAxis label={<AxisLabel axisType='yAxis'>Cost / Customer</AxisLabel>}  axisLine={false} />
       <Tooltip />
        <Bar
+
        fill="blue"
        stackId="1"
        shape={renderShape('pv')}
@@ -79,9 +100,26 @@ export default class Example extends PureComponent {
        </Bar> 
      </BarChart>
      </div>
-     <SimpleCard/>
-    </div>
+     <div>
+       <SimpleCard/>
+      </div>
+       </Col>
+       <Col xs = {2}>
+        <Actions className = "mt-2"></Actions>
+        </Col>
+    </Row>
+      </div>
+     
+      
     );
-  }
+  
+function customizeLabel(){
+    return (
+      <foreignObject>
+      <div style = {{transform:"rotate(-90deg)",transformOrigin: "center"}}>Asset Balance</div>
 
+      </foreignObject>
+    )
+    
+}
 }

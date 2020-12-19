@@ -1,20 +1,32 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import image from '../images/actions_image1.jpg'
 
 function Actions(){
     return (
-        <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
+        < div className = "d-flex flex-column p-2 h-100">
+        <Card className = "mt-2" >
+        <Card.Img variant="top" src ={image} />
         <Card.Body>
-            <Card.Title>Card Title</Card.Title>
+           
             <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+               Understand the power of Compounding
             </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
+            <Button style = {{backgroundColor:" #18287b"}}>Learn Now</Button>
         </Card.Body>
         </Card>
+        <Card className = "mt-2" >
+        <Card.Img variant="top"src ={image}  />
+        <Card.Body>
+            <Card.Text>
+                Track all your expenses on a daily basis
+            </Card.Text>
+            <Button style = {{backgroundColor:" #18287b"}}>Track Now</Button>
+        </Card.Body>
+        </Card>
+        </div>
+        
     )    
 }
 

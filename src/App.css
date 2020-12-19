@@ -19,4 +19,26 @@
  .fs-small{
    font-size: 1rem !important;
  }
- 
+ .fs-large{
+   font-size: 1.5rem !important;
+ }
+ .z-index-2{
+   z-index:2 !important
+ }
+
+ .bg-blue{
+  background-color: #111a48;
+ }
+ .bg-skyBlue{
+   background-color: rgb(197, 211, 236);
+ }
+ .text-blue{
+   color:rgb(46, 46, 160);
+ }
+ .text-even{
+   color:rgb(72, 190, 236);
+ }
+ .border-even{
+   box-shadow: 2px 2px 1px rgb(72, 190, 236) ;
+   border:1px solid rgb(72, 190, 236);
+ }
